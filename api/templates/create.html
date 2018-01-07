@@ -1,0 +1,49 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+<body>
+  <form action="/" method="POST" id="post-form">
+
+     {% csrf_token %}
+
+     <input type="text" value="name of compony" id="name" value="name">
+     <input type="text" id="adrress" value="adress">
+    <input type="text" id="location" value="location">
+
+     <button class="btn btn-lg btn-primary btn-block" type="submit">Créer</button>
+ </form>
+
+<script>
+    $(ducument).on('submit', 'post-form', function(e) {
+      e.preventDefault();
+
+      $.ajax({
+        type:'POST';
+        url:'/create',
+        data:{
+          name:$('#name').val(),
+          title:$('#title').val(),
+        },
+
+        success: function() {
+          alert("created")
+
+        }
+
+
+
+      })
+    })
+<script>
+
+</body>
+</html> -->
+
+
+<form>
+  {% csrf_token %}
+  {{ form.as_p}}
+</form>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+<body>
+
+  {% for object in name %}
+  {{ object.name_of_compony }}<br/>
+  {{ object.adress }}<br/>
+  {{object.location}}
+  {% endfor %}
+  <script>
+  $(document).ready(function () {
+
+    $.ajax( {
+      url:'/list/';
+      method :'GET',
+      success : function (data) {
+        $.each(data, function(key, value) {
+          var TitiKey = key;
+          var Titiname = value.name_of_compony;
+          var Titititle = value.user;
+
+
+        })
+      }
+
+    })
+  })
+  </script>
+
+</body>
+</html>
